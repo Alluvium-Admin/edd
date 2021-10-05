@@ -12,11 +12,11 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="" alt="">
+                <img src="./assets/EDO-logo-main.png" alt="Ekiti Diasopra Logo">
             </div>
             <ul class="menu-list">
                 <li class="menu-list-item">
-                    <a href="#">Register now</a>
+                    <a href="#" class="btn register-btn">Register now</a>
                 </li>
             </ul>
         </nav>
@@ -27,18 +27,21 @@
                     <p class="subtitle">His Excellency Dr. John Kayode Fayemi will address Ekiti Indigenes </p>
                     <div class="event-details">
                         <div class="event-date">
-                            <img src="" alt=""/>
+                            <img src="./assets/svg/calendar.svg" alt="date"/>
                             <h3>10th Sun, Oct 2021</h3>
                         </div>
                         <div class="event-location">
-                            <img src="" alt=""/>
+                            <img src="./assets/svg/map.svg" alt="location"/>
                             <h3>Zoom</h3>
                         </div>
                         <div class="event-time">
-                            <img src="" alt=""/>
+                            <img src="./assets/svg/clock.svg" alt="time"/>
                             <h3>10:00 am(WAT)</h3>
                         </div>
                     </div>
+                </div>
+                <div class="header-register-btn">
+                    <a href="#" class="btn register-btn">Register now</a>
                 </div>
                 <div class="header-countdown">
                     <h4 class="countdown-header">Event starts in:</h4>
@@ -48,45 +51,46 @@
                 </div>
             </div>
             <div class="hero-img">
-                <img src="" alt="">
+                <img src="./assets/Kayode_Fayemi_1-removebg-preview 1.png" alt="Gov. Kayode Fayemi">
             </div>
         </div>
     </header>
     <main>
         <section class="event-main-details-section">
             <div class="event-main-details">
-                <div class="details"></div>
+                <div class="details">
+                    <h2 class="title">Event details</h2>
+                    <div class="body">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                    </div>
+                </div>
                 <div class="share-section">
                     <h3 class="share-title">Share this event</h3>
                     <ul class="share-list">
                         <li class="share-list-item">
                             <a href="https://twitter.com/share" target="_blank">
-                                <img src="https://" alt=""/>
+                                <img src="./assets/svg/socials/monochrome/facebook.svg" alt="facebook"/>
                             </a>
                         </li>
                         <li class="share-list-item">
                             <a href="https://twitter.com/share" target="_blank">
-                                <img src="https://" alt=""/>
+                                <img src="./assets/svg/socials/monochrome/linkedin.svg" alt="linkedin"/>
                             </a>
                         </li>
                         <li class="share-list-item">
                             <a href="https://twitter.com/share" target="_blank">
-                                <img src="https://" alt=""/>
+                                <img src="./assets/svg/socials/monochrome/twitter.svg" alt="twitter"/>
                             </a>
                         </li>
                         <li class="share-list-item">
                             <a href="https://twitter.com/share" target="_blank">
-                                <img src="https://" alt=""/>
+                                <img src="./assets/svg/socials/monochrome/whatsapp.svg" alt="whatsapp"/>
                             </a>
                         </li>
                         <li class="share-list-item">
                             <a href="https://twitter.com/share" target="_blank">
-                                <img src="https://" alt=""/>
-                            </a>
-                        </li>
-                        <li class="share-list-item">
-                            <a href="https://twitter.com/share" target="_blank">
-                                <img src="https://" alt=""/>
+                                <img src="./assets/svg/socials/monochrome/mail.svg" alt="mail"/>
                             </a>
                         </li>
                     </ul>
@@ -110,7 +114,7 @@
         <section class="registration-form">
             <div class="form-header">
                 <h2 class="form-title">Register for the Event Below</h2>
-                <p class="form-subtitle">Fill in the Details below to reserve your seat</p>
+                <p class="form-subtitle">Fill in the Details below to reserve your space</p>
             </div>
             <form >
                 <div class="form-group">
@@ -123,17 +127,18 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Country of residence<span>*</span></label>
-                    <input type="email" id="email" name="email" class="form-input"/>
+                    <input type="text" id="country" name="country" class="form-input"/>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone number<span>*</span></label>
                     <input type="phone" id="phone" name="phone" class="form-input"/>
                 </div>
-                <input type="submit" value="submit" class="submit-btn"/>
+                <input type="submit" value="submit" class="btn submit-btn"/>
             </form>
         </section>
         <section class="socials-section">
-
+            <h3 class="socials-section-title">Socials</h3>
+            <div class="embedded-posts"></div>
         </section>
         <section class="event-countdown">
             <h4 class="countdown-header">Event starts in:</h4>
@@ -147,29 +152,29 @@
             <div class="footer-lists">
                 <div class="footer-logo-section">
                     <div class="footer-logo">
-                        <img src="" alt=""/>
+                        <img src="./assets/EDO-logo-main.png" alt="EDO logo"/>
                     </div>
                     <div class="footer-socials-section">
                         <h3 class="title">Follow us</h3>
                         <ul class="footer-socials-list">
                             <li class="footer-socials-item">
-                                <a href="http://">
-                                    <img src="" alt=""/>
+                                <a href="https://web.facebook.com/profile.php?id=100073472735973" target="_blank">
+                                    <img src="./assets/svg/socials/coloured/facebook.svg" alt="facebook"/>
                                 </a>
                             </li>
                             <li class="footer-socials-item">
                                 <a href="http://">
-                                    <img src="" alt=""/>
+                                    <img src="./assets/svg/socials/coloured/twitter.svg" alt="twitter"/>
                                 </a>
                             </li>
                             <li class="footer-socials-item">
                                 <a href="http://">
-                                    <img src="" alt=""/>
+                                    <img src="./assets/svg/socials/coloured/instagram.svg" alt="instagram"/>
                                 </a>
                             </li>
                             <li class="footer-socials-item">
                                 <a href="http://">
-                                    <img src="" alt=""/>
+                                    <img src="./assets/svg/socials/monochrome/mail.svg" alt="mail"/>
                                 </a>
                             </li>
                         </ul>
@@ -178,9 +183,9 @@
                 <div class="enquiries-list-section">
                     <h3 class="enquiries-title">For more enquiries, please call:</h3>
                     <ul class="enquiries-list">
-                        <li class="enquiries-list-item"><a href="http://">+1 240 217 7511 (US)</a><li>
-                        <li class="enquiries-list-item"><a href="http://">+075 1569 8335 (UK)</a><li>
-                        <li class="enquiries-list-item"><a href="http://">+234 703 660 0991</a><li>
+                        <li class="enquiries-list-item"><a href="tel:+1 240 217 7511">+1 240 217 7511 (US)</a></li>
+                        <li class="enquiries-list-item"><a href="tel:+075 1569 8335">+075 1569 8335 (UK)</a></li>
+                        <li class="enquiries-list-item"><a href="tel:+234 703 660 0991">+234 703 660 0991</a></li>
                     </ul>
                 </div>
                 <div class="contact-us-section">
@@ -189,39 +194,44 @@
                         <li class="contact-us-list-item">
                             <div class="contact-us-list-item-title">
                                 <span class="title-icon">
-                                    <img src="" alt=""/>
-                                    <h4></h4>
+                                    <img src="./assets/svg/socials/monochrome/address.svg" alt="address"/>
                                 </span>
+                                <h4>Address:</h4>
                             </div>
-                            <a href="http://"></a>
-                        <li>
+                            <a href="https://goo.gl/maps/fcsKkmGpupnEN5K9A" target="_blank">Office of state government, second floor, Ado-Ekiti, Ekiti</a>
+                        </li>
                         <li class="contact-us-list-item">
                             <div class="contact-us-list-item-title">
                                 <span class="title-icon">
-                                    <img src="" alt=""/>
-                                    <h4></h4>
+                                    <img src="./assets/svg/socials/monochrome/phone.svg" alt="phone"/>
                                 </span>
+                                <h4>Phone:</h4>
                             </div>
-                            <a href="http://"></a>
-                        <li>
+                            <a href="tel:+2348101234567">+234 (0) 8101234567</a>
+                        </li>
                         <li class="contact-us-list-item">
                             <div class="contact-us-list-item-title">
                                 <span class="title-icon">
-                                    <img src="" alt=""/>
-                                    <h4></h4>
+                                    <img src="./assets/svg/socials/monochrome/contact-mail.svg" alt="email"/>
                                 </span>
+                                <h4>Email:</h4>
                             </div>
-                            <a href="http://"></a>
-                        <li>
+                            <a href="mailto:info@eiid.ng" target="_blank">info@eiid.ng</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-
+                <p>Copyright © 2021 Ekiti Indigenes in Diaspora</p>
             </div>
         </div>
+        <hr class="seperator" />
         <div class="alluvium-ad">
-
+           <p class="title">Web and Marketing Solutions delivered by </p>
+           <a href="https://alluvium.net/" class="logo" target="_blank">
+                <img src="./assets/alluvium-logo.svg" alt="alluvium logo"/>
+                <h3 class="logo-text">alluvium</h3>
+           </a>
         </div>
     </footer>
 </body>
