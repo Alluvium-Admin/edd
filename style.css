@@ -207,6 +207,56 @@ header .hero .hero-details .header-countdown .countdown-header {
   color: #FFFFFF;
 }
 
+header .hero .hero-details .header-countdown .countdown-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 1rem 0;
+}
+
+header .hero .hero-details .header-countdown .countdown-timer .clock-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0.3rem;
+}
+
+header .hero .hero-details .header-countdown .countdown-timer .clock-value h3 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #F8E725;
+}
+
+header .hero .hero-details .header-countdown .countdown-timer .clock-value .value-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F8E725;
+  text-transform: uppercase;
+}
+
+header .hero .hero-details .header-countdown .countdown-timer .clock-seperator {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  color: #F8E725;
+}
+
 header .hero .hero-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,6 +426,7 @@ main .registration-form form .form-group {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 1.5rem 0;
+  max-width: 97%;
 }
 
 main .registration-form form .form-group label {
@@ -393,8 +444,13 @@ main .registration-form form .form-group label span {
 main .registration-form form .form-group .form-input {
   border: 1px solid #535353;
   border-radius: 3px;
-  padding: 0.5rem;
+  padding: 0.8rem 0.5rem;
   font-size: 18px;
+  width: 100%;
+}
+
+main .registration-form form .form-group #phone {
+  padding-left: 3rem;
 }
 
 main .registration-form form .submit-btn {
@@ -435,7 +491,18 @@ main .socials-section .embedded-posts {
 }
 
 main .event-countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #213F5B;
+  padding: 3rem 2rem;
 }
 
 main .event-countdown .countdown-header {
@@ -444,6 +511,61 @@ main .event-countdown .countdown-header {
   line-height: 37px;
   color: #FFFFFF;
   text-align: center;
+}
+
+main .event-countdown .countdown-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem auto;
+}
+
+main .event-countdown .countdown-timer .clock-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 40px 0px;
+  padding: 2rem;
+  margin: 0 0.3rem;
+  min-width: 158px;
+}
+
+main .event-countdown .countdown-timer .clock-value h3 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  color: #213F5B;
+  border-bottom: 1.5px solid #213F5B;
+}
+
+main .event-countdown .countdown-timer .clock-value .value-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #213F5B;
+  text-transform: uppercase;
+}
+
+main .event-countdown .countdown-timer .clock-seperator {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  color: #FFFFFF;
 }
 
 footer {
@@ -473,7 +595,7 @@ footer .footer-container .footer-lists {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1rem 0;
+  margin: 2rem 0 4rem 0;
 }
 
 footer .footer-container .footer-lists .footer-logo-section {
@@ -585,7 +707,7 @@ footer .footer-container .footer-lists .contact-us-section .contact-us-list .con
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   max-width: 256px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -600,6 +722,9 @@ footer .footer-container .footer-lists .contact-us-section .contact-us-list .con
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .footer-container .footer-lists .contact-us-section .contact-us-list .contact-us-list-item .contact-us-list-item-title .title-icon {
@@ -609,7 +734,7 @@ footer .footer-container .footer-lists .contact-us-section .contact-us-list .con
 footer .footer-container .footer-lists .contact-us-section .contact-us-list .contact-us-list-item .contact-us-list-item-title h4 {
   font-weight: normal;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 20px;
   color: #3D3D3D;
 }
 
@@ -628,7 +753,7 @@ footer .footer-container .footer-lists .contact-us-section .contact-us-list .con
 
 footer .footer-container .copyright p {
   font-weight: normal;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 15px;
   color: #3D3D3D;
 }

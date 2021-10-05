@@ -162,6 +162,42 @@ header{
                     line-height: 29px;
                     color: #FFFFFF;
                 }
+
+                .countdown-timer{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    margin: 1rem 0;
+
+                    .clock-value{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 0 0.3rem;
+
+                        h3{
+                            font-weight: 600;
+                            font-size: 36px;
+                            line-height: 44px;
+                            color: #F8E725;
+                        }
+
+                        .value-title{
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #F8E725;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    .clock-seperator{
+                        font-weight: 500;
+                        font-size: 36px;
+                        line-height: 44px;
+                        color: #F8E725;
+                    }
+                }
             }
         }
 
@@ -304,6 +340,7 @@ main{
                display: flex;
                flex-direction: column;
                margin: 1.5rem 0;
+               max-width: 97%;
 
                label{
                     font-weight: 500;
@@ -319,8 +356,12 @@ main{
                .form-input{
                     border: 1px solid #535353;
                     border-radius: 3px;
-                    padding: 0.5rem;
+                    padding: 0.8rem 0.5rem;
                     font-size: 18px;
+                    width: 100%;
+               }
+               #phone{
+                    padding-left: 3rem;
                }
            } 
            .submit-btn{
@@ -353,7 +394,11 @@ main{
     }
 
     .event-countdown{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background: #213F5B;
+        padding: 3rem 2rem;
 
         .countdown-header{
             font-weight: 600;
@@ -361,6 +406,48 @@ main{
             line-height: 37px;
             color: #FFFFFF;
             text-align: center;
+        }
+
+        .countdown-timer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 2rem auto;
+
+            .clock-value{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #FFFFFF;
+                border-radius: 40px 0px;
+                padding: 2rem;
+                margin: 0 0.3rem;
+                min-width: 158px;
+
+                h3{
+                    font-weight: 500;
+                    font-size: 40px;
+                    line-height: 49px;
+                    color: #213F5B;
+                    border-bottom: 1.5px solid #213F5B;
+                }
+
+                .value-title{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #213F5B;
+                    text-transform: uppercase;
+                }
+            }
+
+            .clock-seperator{
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 49px;
+                color: #FFFFFF;
+            }
+
         }
     }
 }
@@ -378,7 +465,7 @@ footer{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin: 1rem 0;
+            margin: 2rem 0 4rem 0;
 
             .footer-logo-section{
                 display: flex;
@@ -467,13 +554,14 @@ footer{
                     .contact-us-list-item{
                         display: flex;
                         flex-wrap: wrap;
-                        margin: 0.5rem 0;
+                        margin: 1rem 0;
                         max-width: 256px;
                         align-items: center;
 
                         .contact-us-list-item-title{
                             display: flex;
                             flex-direction: row;
+                            align-items: center;
 
                             .title-icon{
                                 margin: 0 0.3rem;
@@ -482,7 +570,7 @@ footer{
                             h4{
                                 font-weight: normal;
                                 font-size: 14px;
-                                line-height: 17px;
+                                line-height: 20px;
                                 color: #3D3D3D;
                             }
                         }
@@ -508,7 +596,7 @@ footer{
         .copyright{
             p{
                 font-weight: normal;
-                font-size: 11px;
+                font-size: 14px;
                 line-height: 15px;
                 color: #3D3D3D;
             }

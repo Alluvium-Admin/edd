@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css"/>
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <title>Ekiti Diasopra Day</title>
 </head>
 <body>
@@ -16,7 +21,7 @@
             </div>
             <ul class="menu-list">
                 <li class="menu-list-item">
-                    <a href="#" class="btn register-btn">Register now</a>
+                    <a href="#registration-form" class="btn register-btn">Register now</a>
                 </li>
             </ul>
         </nav>
@@ -41,12 +46,20 @@
                     </div>
                 </div>
                 <div class="header-register-btn">
-                    <a href="#" class="btn register-btn">Register now</a>
+                    <a href="#registration-form" class="btn register-btn">Register now</a>
                 </div>
                 <div class="header-countdown">
                     <h4 class="countdown-header">Event starts in:</h4>
                     <div class="countdown-timer">
-        
+                        <div class="clock-value">
+                            <h3 class="days-value">11</h3>
+                            <p class="value-title">Days</p>
+                        </div>
+                        <h3 class="clock-seperator">:</h3>
+                        <div class="clock-value">
+                            <h3 class="total-hours-value">11</h3>
+                            <p class="value-title">Hours</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,7 +124,7 @@
                 </div>
             </div>
         </section>
-        <section class="registration-form">
+        <section class="registration-form" id="registration-form">
             <div class="form-header">
                 <h2 class="form-title">Register for the Event Below</h2>
                 <p class="form-subtitle">Fill in the Details below to reserve your space</p>
@@ -143,7 +156,25 @@
         <section class="event-countdown">
             <h4 class="countdown-header">Event starts in:</h4>
             <div class="countdown-timer">
-
+                <div class="clock-value">
+                    <h3 class="days-value">10</h3>
+                    <p class="value-title">Days</p>
+                </div>
+                <h3 class="clock-seperator">:</h3>
+                <div class="clock-value">
+                    <h3 class="hours-value">11</h3>
+                    <p class="value-title">Hours</p>
+                </div>
+                <h3 class="clock-seperator">:</h3>
+                <div class="clock-value">
+                    <h3 class="minutes-value">30</h3>
+                    <p class="value-title">Minutes</p>
+                </div>
+                <h3 class="clock-seperator">:</h3>
+                <div class="clock-value">
+                    <h3 class="seconds-value">12</h3>
+                    <p class="value-title">Seconds</p>
+                </div>
             </div>
         </section>
     </main>
@@ -234,5 +265,13 @@
            </a>
         </div>
     </footer>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+    <script src="app.js"></script>
 </body>
 </html>
