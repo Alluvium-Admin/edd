@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import 'breakpoints.scss';
+
 
 *,
 body,
@@ -24,6 +26,7 @@ body{
     line-height: 23px;
     transition: 0.2s;
     cursor: pointer;
+    white-space: nowrap;
 
     &:hover{
         background: #007e9e; 
@@ -39,25 +42,26 @@ header{
         padding: 0.8rem 1.2rem;
         background: #ffffff;
 
+        @include media("<phone"){
+            padding: 0.8rem;
+        }
+
+        @include media(">=phone","<=tablet"){
+            padding: 0.4rem 1rem;
+        }
+
         .menu-list{
             list-style: none;
 
             .menu-list-item{
                 margin: 0 0.5rem;
                 .register-btn{
-                    background: #009CC2;
-                    text-transform: capitalize;
-                    text-decoration: none;
-                    padding: 0.8rem 1.6rem;
-                    color: #fff;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 23px;
-                    transition: 0.2s;
-                    cursor: pointer;
-
-                    &:hover{
-                        background: #007e9e; 
+                    @include media("<phone"){
+                        padding: 0.5rem;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        padding: 0.6rem 1rem;
                     }
                 }
             }
@@ -69,16 +73,44 @@ header{
         flex-direction: row;
         justify-content: space-around;
         padding: 0 1rem;
-        background:linear-gradient(0deg, rgba(18, 34, 49, 0.85), rgba(18, 34, 49, 0.85)), url("./assets/Ekiti\ facebook\ cover\ 1.png");
+        background:linear-gradient(0deg, rgba(18, 34, 49, 0.85), rgba(18, 34, 49, 0.85)), url("../assets/Ekiti\ facebook\ cover\ 1.png");
         background-size:cover;
         height: 100%;
         min-height: 70vh;
+
+        @include media("<phone"){
+            padding: 1rem 0.5rem;
+        }
+
+        @include media(">=phone","<=tablet"){
+            padding: 2rem 1.5rem;
+        }
+
+        @include media(">=tablet","<=custom-view-1"){
+            padding: 2rem 1.5rem;
+        }
 
         .hero-details{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-self: center;
+
+            @include media("<phone"){
+                align-items: center;
+                text-align: center;
+            }
+    
+            @include media(">=phone","<=tablet"){
+                align-items: center;
+                text-align: center;
+
+            }
+
+            @include media(">=tablet","<=custom-view-1"){
+                align-items: center;
+                text-align: center;
+            }
 
             .hero-description{
                 .title{
@@ -87,6 +119,17 @@ header{
                     line-height: 59px;
                     color: #FFFFFF;
                     margin: 1rem 0;
+
+                    @include media("<phone"){
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size: 36px;
+                        line-height: 40px;
+        
+                    }
 
                     span{
                         color: #F8E725;
@@ -100,14 +143,48 @@ header{
                     color: #FFFFFF;
                     margin: 1.5rem 0;
                     max-width: 90%;
+
+                    @include media("<phone"){
+                        max-width: unset;
+                        font-size: 14px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        max-width: unset;
+                        font-size: 16px;
+                    }
+        
+                    @include media(">=tablet","<=custom-view-1"){
+                        max-width: unset;
+                    }
                 }
 
                 .event-details{
                     display: flex;
                     flex-direction: row;
 
+                    @include media("<phone"){
+                        justify-content: center;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        justify-content: center;
+                    }
+        
+                    @include media(">=tablet","<=custom-view-1"){
+                        justify-content: center;
+                    }
+
                     .event-location{
                         margin: 0 1rem;
+
+                        @include media("<phone"){
+                            margin: 0 0.2rem;
+                        }
+            
+                        @include media(">=phone","<=custom-view-3"){
+                            margin: 0 0.5rem;
+                        }
                     }
 
                     .event-date,
@@ -127,6 +204,16 @@ header{
                             line-height: 17px;
                             color: #FFFFFF;
                             margin: 0 0.8rem;
+
+                            @include media("<phone"){
+                                margin: 0 0.2rem;
+                                font-size: 13px;
+                            }
+                
+                            @include media(">=phone","<=custom-view-3"){
+                                margin: 0 0.6rem;
+                                font-size: 13px;
+                            }
                         }
                     }
                 }
@@ -136,19 +223,12 @@ header{
                 margin: 2.5rem 0;
 
                 .register-btn{
-                    background: #009CC2;
-                    text-transform: capitalize;
-                    text-decoration: none;
-                    padding: 0.7rem 1.4rem;
-                    color: #fff;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 23px;
-                    transition: 0.2s;
-                    cursor: pointer;
-
-                    &:hover{
-                        background: #007e9e; 
+                    @include media("<phone"){
+                        font-size: 14px;
+                    }
+        
+                    @include media(">=phone","<=custom-view-3"){
+                        font-size: 15px;
                     }
                 }
             }
@@ -161,6 +241,23 @@ header{
                     font-size: 24px;
                     line-height: 29px;
                     color: #FFFFFF;
+
+                    @include media("<phone"){
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 29px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        text-align: center;
+                        font-size: 20px;
+                    }
+        
+                    @include media(">=tablet","<=custom-view-1"){
+                        text-align: center;
+                        font-size: 22px;
+                    }
+
                 }
 
                 .countdown-timer{
@@ -168,6 +265,20 @@ header{
                     flex-direction: row;
                     align-items: flex-start;
                     margin: 1rem 0;
+
+                    @include media("<phone"){
+                        justify-content: center;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        justify-content: center;
+
+                    }
+        
+                    @include media(">=tablet","<=custom-view-1"){
+                        justify-content: center;
+
+                    }
 
                     .clock-value{
                         display: flex;
@@ -180,6 +291,16 @@ header{
                             font-size: 36px;
                             line-height: 44px;
                             color: #F8E725;
+
+                            @include media("<phone"){
+                                font-size: 18px;
+                                line-height: 30px;
+                            }
+                
+                            @include media(">=phone","<=custom-view-3"){
+                                font-size: 26px;
+                                line-height: 40px;
+                            }
                         }
 
                         .value-title{
@@ -188,6 +309,14 @@ header{
                             line-height: 17px;
                             color: #F8E725;
                             text-transform: uppercase;
+
+                            @include media("<phone"){
+                                font-size: 13px;
+                            }
+                
+                            @include media(">=phone","<=custom-view-3"){
+                                font-size: 13.5px;
+                            }
                         }
                     }
 
@@ -196,6 +325,16 @@ header{
                         font-size: 36px;
                         line-height: 44px;
                         color: #F8E725;
+
+                        @include media("<phone"){
+                            font-size: 18px;
+                            line-height: 30px;
+                        }
+            
+                        @include media(">=phone","<=custom-view-3"){
+                            font-size: 26px;
+                            line-height: 40px;
+                        }
                     }
                 }
             }
@@ -204,6 +343,18 @@ header{
         .hero-img{
             display: flex;
             align-self: flex-end;
+
+            @include media("<phone"){
+                display: none;
+            }
+    
+            @include media(">=phone","<=tablet"){
+                display: none;
+            }
+
+            @include media(">=tablet","<=custom-view-1"){
+                display: none;
+            }
 
             img{
                 align-items: flex-end
@@ -220,6 +371,18 @@ main{
         margin: 0 1rem;
         padding: 3rem 1rem;
 
+        @include media("<phone"){
+            flex-direction: column-reverse;
+            margin: 0 0.2rem;
+            padding: 2rem 0.4rem;
+        }
+
+        @include media(">=phone","<=tablet"){
+            flex-direction: column-reverse;
+            margin: 0 0.5rem;
+            padding: 2rem 0.5rem;
+        }
+
         .event-main-details{
             width: 100%;
 
@@ -231,6 +394,14 @@ main{
                     font-size: 24px;
                     line-height: 29px;
                     color: #212121;
+
+                    @include media("<phone"){
+                        font-size: 18px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size: 20px;
+                    }
                 }
 
                 .body{
@@ -241,6 +412,16 @@ main{
                         font-size: 16px;
                         line-height: 35px;
                         color: #3D3D3D;
+
+                        @include media("<phone"){
+                            font-size: 14px;
+                            line-height: 32px;
+                        }
+                
+                        @include media(">=phone","<=tablet"){
+                            font-size: 15px;
+                            line-height: 34px;
+                        }
                     }
                 }
             }
@@ -293,6 +474,25 @@ main{
         flex-direction: column;
         padding: 0 2rem;
 
+        @include media("<phone"){
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        @include media(">=phone","<=tablet"){
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        @include media(">=tablet","<=custom-view"){
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+
+        }
+
         .event-main-details-keypoint{
             margin: 0 1rem 1rem 1rem;
 
@@ -300,7 +500,15 @@ main{
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 29px;
-                color: #212121
+                color: #212121;
+
+                @include media("<phone"){
+                    font-size: 16px;
+                }
+        
+                @include media(">=phone","<=tablet"){
+                    font-size: 18px;
+                }
             }
 
             .body{
@@ -310,6 +518,44 @@ main{
                 color: #3F3F3F;
                 margin: 1rem 0;
                 padding: 0.5rem 0;
+
+                @include media("<phone"){
+                    margin: 0.4rem 0;
+                    font-size: 14px;
+                }
+        
+                @include media(">=phone","<=tablet"){
+                    margin: 0.6rem 0;
+                    font-size: 16px;
+                }
+            }
+
+            .date-and-time{
+                @include media("<phone"){
+                    display: none;
+                }
+        
+                @include media(">=phone","<=tablet"){
+                    display: none;
+                }
+            }
+
+            .date-and-time-mobile{
+                display: none;
+                color: #3F3F3F;
+                line-height: 22px;
+
+                @include media("<phone"){
+                    display: block;
+                    font-size: 13px;
+                    margin: 0.4rem 0;
+                }
+        
+                @include media(">=phone","<=tablet"){
+                    display: block;
+                    font-size: 15px;
+                    margin: 0.6rem 0;
+                }
             }
         }
     }
@@ -317,6 +563,17 @@ main{
     .registration-form{
         padding: 2rem 1rem;
         margin: 1rem;
+
+        @include media("<phone"){
+            margin: 0.4rem;
+            padding: 1.2rem 0;
+        }
+
+        @include media(">=phone","<=custom-view-3"){
+            margin: 0.6rem;
+            padding: 1.6rem 0.4rem;
+    
+        }
         .form-header{
             text-align: center;
             .form-title{
@@ -325,6 +582,15 @@ main{
                 font-size: 30px;
                 line-height: 29px;
                 color: #122231;
+
+                @include media("<phone"){
+                    font-size: 20px;
+                }
+        
+                @include media(">=phone","<=custom-view-3"){
+                    font-size: 25px;
+            
+                }
             }
 
             .form-subtitle{
@@ -359,6 +625,16 @@ main{
                     padding: 0.8rem 0.5rem;
                     font-size: 18px;
                     width: 100%;
+
+                        
+                    @include media("<phone"){
+                        font-size: 16px;
+                    }
+            
+                    @include media(">=phone","<=custom-view-3"){
+                        font-size: 16px;
+                
+                    }
                }
                #phone{
                     padding-left: 3rem;
@@ -400,6 +676,15 @@ main{
         background: #213F5B;
         padding: 3rem 2rem;
 
+        @include media("<phone"){
+            padding: 3rem 0.5rem;
+        }
+
+        @include media(">=phone","<=custom-view-3"){
+            padding: 3rem 0;
+
+        }
+
         .countdown-header{
             font-weight: 600;
             font-size: 30px;
@@ -414,6 +699,16 @@ main{
             align-items: center;
             margin: 2rem auto;
 
+            
+            @include media("<phone"){
+                flex-wrap: wrap;
+            }
+
+            @include media(">=phone","<=custom-view-3"){
+                flex-wrap: wrap;
+
+            }
+
             .clock-value{
                 display: flex;
                 flex-direction: column;
@@ -424,12 +719,36 @@ main{
                 margin: 0 0.3rem;
                 min-width: 158px;
 
+                @include media("<phone"){
+                    min-width: auto;
+                    padding: 0.3rem;
+                    border-radius: 18px 0px;
+                }
+        
+                @include media(">=phone","<=tablet"){
+                    min-width: auto;
+                    padding: 0.6rem;
+                    border-radius: 22px 0px;
+                }
+
                 h3{
                     font-weight: 500;
                     font-size: 40px;
                     line-height: 49px;
                     color: #213F5B;
                     border-bottom: 1.5px solid #213F5B;
+                
+                    @include media("<phone"){
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+            
+                    @include media(">=phone","<=tablet"){
+                        font-size: 20px;
+                        line-height: 30px;
+
+                    }
+    
                 }
 
                 .value-title{
@@ -438,6 +757,18 @@ main{
                     line-height: 20px;
                     color: #213F5B;
                     text-transform: uppercase;
+                    
+                    @include media("<phone"){
+                        font-size: 14px;
+                        line-height: 30px;
+                    }
+            
+                    @include media(">=phone","<=custom-view-3"){
+                        font-size: 14px;
+                        line-height: 30px;
+
+                    }
+                
                 }
             }
 
@@ -467,9 +798,30 @@ footer{
             justify-content: space-between;
             margin: 2rem 0 4rem 0;
 
+            @include media("<phone"){
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+    
+            @include media(">=phone","<=custom-view-2"){
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+    
+            }
+
             .footer-logo-section{
                 display: flex;
                 flex-direction: column;
+
+                @include media("<phone"){
+                    margin: 1rem 0;
+                }
+        
+                @include media(">=phone","<=custom-view-2"){
+                    margin: 1rem 0;
+                }
                 
 
                 .footer-logo{
@@ -510,6 +862,15 @@ footer{
 
             .enquiries-list-section{
                 margin: 0 1rem;
+
+                @include media("<phone"){
+                    margin: 1rem 0;
+                }
+        
+                @include media(">=phone","<=custom-view-2"){
+                    margin: 1rem 0;
+                }
+
                 .enquiries-title{
                     font-style: normal;
                     font-weight: 500;
@@ -531,6 +892,14 @@ footer{
                             font-size: 18px;
                             line-height: 30px;
 
+                            @include media("<phone"){
+                                font-size: 16px;
+                            }
+                    
+                            @include media(">=phone","<=custom-view-3"){
+                                font-size: 16px;
+                            }
+
                             &:hover{
                                 text-decoration: underline;
                             }
@@ -540,12 +909,35 @@ footer{
             }
 
             .contact-us-section{
+                
                 margin: 0 1rem;
+
+                @include media("<phone"){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 1rem 0;
+                }
+        
+                @include media(">=phone","<=custom-view-2"){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 1rem 0;
+                }
                 .contact-us-title{
                     font-weight: 600;
                     font-size: 18px;
                     line-height: 20px;
                     color: #3D3D3D;
+
+                    @include media("<phone"){
+                        font-size: 16px;
+                    }
+            
+                    @include media(">=phone","<=custom-view-3"){
+                        font-size: 16px;
+                    }
                 }
 
                 .contact-us-list{
@@ -557,6 +949,20 @@ footer{
                         margin: 1rem 0;
                         max-width: 256px;
                         align-items: center;
+
+                        
+                        @include media("<phone"){
+                           flex-wrap: nowrap;
+                           flex-direction: column;
+                           max-width: unset;
+
+                        }
+                
+                        @include media(">=phone","<=custom-view-2"){
+                            flex-wrap: nowrap;
+                            flex-direction: column;
+                            max-width: unset;
+                        }
 
                         .contact-us-list-item-title{
                             display: flex;
@@ -572,6 +978,7 @@ footer{
                                 font-size: 14px;
                                 line-height: 20px;
                                 color: #3D3D3D;
+
                             }
                         }
 
@@ -583,6 +990,16 @@ footer{
                             color: #3D3D3D;
                             text-decoration: none;
                             margin: 0 0.2rem;
+
+                            @include media("<phone"){
+                                margin: 0.5rem 0.2rem;
+                                
+                            }
+                    
+                            @include media(">=phone","<=custom-view-2"){
+                                margin: 0.5rem 0.2rem;
+
+                            }
 
                             &:hover{
                                 text-decoration: underline;
@@ -596,9 +1013,17 @@ footer{
         .copyright{
             p{
                 font-weight: normal;
-                font-size: 14px;
+                font-size: 13px;
                 line-height: 15px;
                 color: #3D3D3D;
+
+                @include media("<phone"){
+                   text-align: center;
+                }
+        
+                @include media(">=phone","<=custom-view-3"){
+                    text-align: center;
+                }
             }
         }
     }
@@ -619,11 +1044,29 @@ footer{
         align-self: center;
         margin: 1rem 0;
 
+        @include media("<phone"){
+            flex-direction: column;
+        }
+
+        @include media(">=phone","<=custom-view-3"){
+            flex-direction: column;
+
+        }
+
         .title{
             font-weight: normal;
             font-size: 14px;
             line-height: 17px;
             color: #213F5B;
+
+            @include media("<phone"){
+                font-size: 14px;
+            }
+    
+            @include media(">=phone","<=custom-view-3"){
+                font-size: 14px;
+    
+            }
         }
 
         .logo{
