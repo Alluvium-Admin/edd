@@ -19,7 +19,7 @@ body {
 }
 
 .btn {
-  background: #009CC2;
+  background: #06AE60;
   text-transform: capitalize;
   text-decoration: none;
   padding: 0.7rem 1.4rem;
@@ -51,7 +51,7 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   background: #ffffff;
 }
 
@@ -98,8 +98,8 @@ header .hero {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 0 1rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(18, 34, 49, 0.85)), to(rgba(18, 34, 49, 0.85))), url("../assets/Ekiti facebook cover 1.png");
-  background: linear-gradient(0deg, rgba(18, 34, 49, 0.85), rgba(18, 34, 49, 0.85)), url("../assets/Ekiti facebook cover 1.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(104, 82, 3, 0.8)), to(rgba(104, 82, 3, 0.8))), url("../assets/Ekiti facebook cover 1.png");
+  background: linear-gradient(0deg, rgba(104, 82, 3, 0.8), rgba(104, 82, 3, 0.8)), url("../assets/Ekiti facebook cover 1.png");
   background-size: cover;
   height: 100%;
   min-height: 70vh;
@@ -188,7 +188,7 @@ header .hero .hero-details .hero-description .title {
 }
 
 header .hero .hero-details .hero-description .title span {
-  color: #F8E725;
+  color: #fb4146;
 }
 
 header .hero .hero-details .hero-description .subtitle {
@@ -929,7 +929,7 @@ main .event-countdown {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #213F5B;
+  background: #06ae60;
   padding: 3rem 2rem;
 }
 
@@ -1020,7 +1020,7 @@ main .event-countdown .countdown-timer .clock-value h3 {
   font-size: 40px;
   line-height: 49px;
   color: #213F5B;
-  border-bottom: 1.5px solid #213F5B;
+  border-bottom: 1.5px solid #06ae60;
 }
 
 @media (max-width: 359px) {

@@ -43,7 +43,10 @@ function initializeClock(endtime) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date("Oct 10, 2021 10:00:00");
+const deadline = new Date("Oct 10, 2021 15:00:00");
 initializeClock(deadline);
 
 console.log(deadline)
+
+
+// Submit registration form

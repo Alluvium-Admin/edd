@@ -16,7 +16,7 @@ body{
 }
 
 .btn{
-    background: #009CC2;
+    background: #06AE60;
     text-transform: capitalize;
     text-decoration: none;
     padding: 0.7rem 1.4rem;
@@ -39,7 +39,7 @@ header{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0.8rem 1.2rem;
+        padding: 0.5rem 1.2rem;
         background: #ffffff;
 
         @include media("<phone"){
@@ -73,7 +73,7 @@ header{
         flex-direction: row;
         justify-content: space-around;
         padding: 0 1rem;
-        background:linear-gradient(0deg, rgba(18, 34, 49, 0.85), rgba(18, 34, 49, 0.85)), url("../assets/Ekiti\ facebook\ cover\ 1.png");
+        background:linear-gradient(0deg, rgba(104, 82, 3, 0.8), rgba(104, 82, 3, 0.8)), url("../assets/Ekiti\ facebook\ cover\ 1.png");
         background-size:cover;
         height: 100%;
         min-height: 70vh;
@@ -132,7 +132,7 @@ header{
                     }
 
                     span{
-                        color: #F8E725;
+                        color: #fb4146;
                     }
                 }
 
@@ -673,7 +673,7 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: #213F5B;
+        background: rgba(6, 174, 96, 1);
         padding: 3rem 2rem;
 
         @include media("<phone"){
@@ -736,7 +736,7 @@ main{
                     font-size: 40px;
                     line-height: 49px;
                     color: #213F5B;
-                    border-bottom: 1.5px solid #213F5B;
+                    border-bottom: 1.5px solid rgba(6, 174, 96, 1);
                 
                     @include media("<phone"){
                         font-size: 18px;
