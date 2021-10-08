@@ -29,7 +29,7 @@ body{
     white-space: nowrap;
 
     &:hover{
-        background: #007e9e; 
+        background: #058a4c; 
     }
 }
 
@@ -486,13 +486,6 @@ main{
             padding: 0;
         }
 
-        @include media(">=tablet","<=custom-view"){
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 0;
-
-        }
-
         .event-main-details-keypoint{
             margin: 0 1rem 1rem 1rem;
 
@@ -625,7 +618,7 @@ main{
                     padding: 0.8rem 0.5rem;
                     font-size: 18px;
                     width: 100%;
-
+                    border: none;
                         
                     @include media("<phone"){
                         font-size: 16px;
@@ -1089,5 +1082,150 @@ footer{
             }
         }
 
+    }
+}
+
+.confirmation-popup{
+    display: none;
+    position: fixed;
+
+    .confirmation-popup-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+        max-width: 700px;
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @include media("<phone"){
+            width: 90%;
+        }
+
+        @include media(">=phone","<=tablet"){
+            width: 80%;
+
+        }
+
+        .close-btn{
+            display: block;
+            align-self: flex-end;
+            cursor: pointer;
+        }
+
+        .confirmation-popup-details{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0.6rem 0;
+
+                .confirm-icon{
+                    max-width: 92px;
+
+                    @include media("<phone"){
+                        max-width: 60px;
+                    }
+            
+                    @include media(">=phone","<=custom-view-2"){
+                        max-width: 80px;
+                    }
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .confirm-text{
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #212121;
+
+                    @include media("<phone"){
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+            
+                    @include media(">=phone","<=custom-view"){
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            .body{
+                margin: 0.5rem 0;
+
+                p{
+                    // max-width:90%;
+                    font-weight: normal;
+                    font-size: 22px;
+                    line-height: 35px;
+                    color: #3D3D3D;
+                    text-align: center;
+                    margin: 0.3rem 0;
+
+                    @include media("<phone"){
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+            
+                    @include media(">=phone","<=custom-view"){
+                        font-size: 18px;
+                        line-height: 32px;
+                    }
+
+                    a{
+                        color: #122231;
+                        text-decoration: none;
+
+                        @include media("<phone"){
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                
+                        @include media(">=phone","<=custom-view"){
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
+
+                        &:hover{
+                            text-decoration:underline;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .popup-mask{
+        position: fixed;
+        z-index: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .popup-mask {
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      background-color: rgba(255, 255, 255, 0.3);  
     }
 }

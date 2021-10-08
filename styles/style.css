@@ -34,7 +34,7 @@ body {
 }
 
 .btn:hover {
-  background: #007e9e;
+  background: #058a4c;
 }
 
 header .navbar {
@@ -689,19 +689,6 @@ main .event-main-details-keypoints {
   }
 }
 
-@media (min-width: 768px) and (max-width: 975px) {
-  main .event-main-details-keypoints {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0;
-  }
-}
-
 main .event-main-details-keypoints .event-main-details-keypoint {
   margin: 0 1rem 1rem 1rem;
 }
@@ -863,6 +850,7 @@ main .registration-form form .form-group .form-input {
   padding: 0.8rem 0.5rem;
   font-size: 18px;
   width: 100%;
+  border: none;
 }
 
 @media (max-width: 359px) {
@@ -1496,4 +1484,189 @@ footer .alluvium-ad .logo .logo-text {
   line-height: 17px;
   color: #213F5B;
   text-transform: uppercase;
+}
+
+.confirmation-popup {
+  display: none;
+  position: fixed;
+}
+
+.confirmation-popup .confirmation-popup-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 1;
+  max-width: 700px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 359px) {
+  .confirmation-popup .confirmation-popup-main {
+    width: 90%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .confirmation-popup .confirmation-popup-main {
+    width: 80%;
+  }
+}
+
+.confirmation-popup .confirmation-popup-main .close-btn {
+  display: block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.6rem 0;
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .title .confirm-icon {
+  max-width: 92px;
+}
+
+@media (max-width: 359px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .title .confirm-icon {
+    max-width: 60px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 900px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .title .confirm-icon {
+    max-width: 80px;
+  }
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .title .confirm-icon img {
+  width: 100%;
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .title .confirm-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #212121;
+}
+
+@media (max-width: 359px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .title .confirm-text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 975px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .title .confirm-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .body {
+  margin: 0.5rem 0;
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .body p {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 35px;
+  color: #3D3D3D;
+  text-align: center;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 359px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .body p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 975px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .body p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .body p a {
+  color: #122231;
+  text-decoration: none;
+}
+
+@media (max-width: 359px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .body p a {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 975px) {
+  .confirmation-popup .confirmation-popup-main .confirmation-popup-details .body p a {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.confirmation-popup .confirmation-popup-main .confirmation-popup-details .body p a:hover {
+  text-decoration: underline;
+}
+
+.confirmation-popup .popup-mask {
+  position: fixed;
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .popup-mask {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
