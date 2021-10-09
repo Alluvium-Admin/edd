@@ -28,11 +28,15 @@ body{
     cursor: pointer;
     white-space: nowrap;
     border: none;
-    
+
 
     &:hover{
         background: #058a4c; 
     }
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;
 }
 
 header{
@@ -556,7 +560,7 @@ main{
     }
 
     .registration-form{
-        
+        display: none;
         padding: 2rem 1rem;
         margin: 1rem;
 
@@ -645,6 +649,10 @@ main{
                 font-family: 'Montserrat', sans-serif;
            }
         }
+    }
+
+    .event-speakers-section{
+        display: none;
     }
 
     .socials-section{
