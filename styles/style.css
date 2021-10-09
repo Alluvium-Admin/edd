@@ -897,13 +897,19 @@ main .socials-section .socials-section-title {
 }
 
 main .socials-section .embedded-posts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .socials-section .embedded-posts .embedded-post {
+  margin: 0.5rem;
+  padding: 0.2rem;
 }
 
 main .event-countdown {

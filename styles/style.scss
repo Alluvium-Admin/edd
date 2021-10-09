@@ -657,8 +657,15 @@ main{
         }
 
         .embedded-posts{
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 0.5rem;
+            align-items: center;
+
+            .embedded-post{
+                margin: 0.5rem;
+                padding: 0.2rem;
+            }
         }
     }
 
