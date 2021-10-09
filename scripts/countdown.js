@@ -1,4 +1,6 @@
 // Countdown clock
+const fireworks = document.querySelector('.fireworks');
+
 function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
@@ -32,21 +34,34 @@ function initializeClock(endtime) {
         hoursValue.innerHTML = ('0' + t.hours).slice(-2);
         minutesValue.innerHTML = ('0' + t.minutes).slice(-2);
         secondsValue.innerHTML = ('0' + t.seconds).slice(-2);
-        totalHoursValue.innerHTML = Math.ceil( t.hours + (t.minutes/60) + (t.seconds/3600) )
+        totalHoursValue.innerHTML = Math.ceil(t.hours + (t.minutes / 60) + (t.seconds / 3600));
 
-        if (t.total <= 0) {
-            clearInterval(timeinterval);
-        }
+        // if (t.total <= 0) {
+        //     clearInterval(timeinterval);
+        // } 
+            
     }
 
     updateClock();
-    const timeinterval = setInterval(updateClock, 1000);
+    // const timeinterval = setInterval(updateClock, 1000);
 }
 
 const deadline = new Date("Oct 10, 2021 15:00:00");
+
+
 initializeClock(deadline);
 
-console.log(deadline)
+const today = new Date().toLocaleString();
+console.log(today);
+
+// Display fireworks
+if (today === "10/10/2021, 3:00:00 PM") {
+    fireworks.style.display = "block";
+
+    setTimeout(() => {
+        fireworks.style.display = "none";
+    }, 6000);
+}
 
 
-// Submit registration form
+console.log(deadline);
