@@ -370,6 +370,8 @@ header{
 }
 
 main{
+    display: flex;
+    flex-direction:column;
     background: #E5E5E5;
     .event-main-details-section{
         display: flex;
@@ -478,7 +480,7 @@ main{
     .event-main-details-keypoints{
         display: flex;
         flex-direction: column;
-        padding: 0 2rem;
+        padding: 0 0.5rem;
 
         @include media("<phone"){
             flex-direction: row;
@@ -515,7 +517,7 @@ main{
                 font-size: 18px;
                 line-height: 22px;
                 color: #3F3F3F;
-                margin: 1rem 0;
+                margin: 0.8rem 0;
                 padding: 0.5rem 0;
 
                 @include media("<phone"){
@@ -558,6 +560,8 @@ main{
             }
         }
     }
+
+
 
     .registration-form{
         display: none;
@@ -651,8 +655,67 @@ main{
         }
     }
 
+    .main-register-btn{
+        align-self: center;
+        margin: 0 0 3rem 0;
+    }
+
     .event-speakers-section{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+
+        .title{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #212121;
+            text-align: center;
+        }
+
+        .event-speakers{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-gap: 1rem;
+            margin: 1rem 0.3rem;
+
+            .event-speaker{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0.5rem;
+
+                .speaker-img{
+                    margin: 0.4rem 0;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .speaker-description{
+                    text-align: center;
+
+                    .speaker-name{
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #212121;
+                    }
+
+                    .speaker-post{
+                        text-transform: uppercase;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: #06AE60;
+                    }
+                }
+
+            }
+        }
     }
 
     .socials-section{

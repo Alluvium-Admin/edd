@@ -54,14 +54,13 @@ initializeClock(deadline);
 const today = new Date().toLocaleString();
 console.log(today);
 
-// Display fireworks
-if (today === "10/10/2021, 3:00:00 PM") {
-    fireworks.style.display = "block";
+// Displaying fireworks
 
-    setTimeout(() => {
-        fireworks.style.display = "none";
-    }, 6000);
-}
+fireworks.style.display = "block";
+
+setTimeout(() => {
+    fireworks.style.display = "none";
+}, 7000);
 
 
 console.log(deadline);
