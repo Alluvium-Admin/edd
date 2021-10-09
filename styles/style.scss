@@ -27,6 +27,8 @@ body{
     transition: 0.2s;
     cursor: pointer;
     white-space: nowrap;
+    border: none;
+    
 
     &:hover{
         background: #058a4c; 
