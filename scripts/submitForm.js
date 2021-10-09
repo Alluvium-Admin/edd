@@ -60,6 +60,7 @@ submitBtn.addEventListener('click', (e) => {
     .then(function (response) {
         if (response === 200){
             confirmationPopup.style.display = "block";
+            setTimeout(function(){ window.open('https://www.eventbrite.co.uk/e/1010-ekiti-diaspora-day-tickets-188487159167', '_blank'); }, 3000);
         }
     })
     .catch(function (error) {
