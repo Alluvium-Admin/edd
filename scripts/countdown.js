@@ -25,16 +25,26 @@ function initializeClock(endtime) {
     const secondsValue = document.querySelector('.seconds-value');
     const totalHoursValue = document.querySelector('.total-hours-value');
 
+    // const timeinterval = setInterval(updateClock, 1000);
+    
     function updateClock() {
         const t = getTimeRemaining(endtime);
 
+        // daysValues.forEach(daysValue => {
+        //     daysValue.innerHTML = t.days;
+        // })
+        // hoursValue.innerHTML = ('0' + t.hours).slice(-2);
+        // minutesValue.innerHTML = ('0' + t.minutes).slice(-2);
+        // secondsValue.innerHTML = ('0' + t.seconds).slice(-2);
+        // totalHoursValue.innerHTML = Math.ceil(t.hours + (t.minutes / 60) + (t.seconds / 3600));
+
         daysValues.forEach(daysValue => {
-            daysValue.innerHTML = t.days;
+            daysValue.innerHTML = "0";
         })
-        hoursValue.innerHTML = ('0' + t.hours).slice(-2);
-        minutesValue.innerHTML = ('0' + t.minutes).slice(-2);
-        secondsValue.innerHTML = ('0' + t.seconds).slice(-2);
-        totalHoursValue.innerHTML = Math.ceil(t.hours + (t.minutes / 60) + (t.seconds / 3600));
+        hoursValue.innerHTML = "0";
+        minutesValue.innerHTML = "0";
+        secondsValue.innerHTML = "0";
+        totalHoursValue.innerHTML = "0";
 
         // if (t.total <= 0) {
         //     clearInterval(timeinterval);
@@ -43,7 +53,8 @@ function initializeClock(endtime) {
     }
 
     updateClock();
-    // const timeinterval = setInterval(updateClock, 1000);
+
+    
 }
 
 const deadline = new Date("Oct 10, 2021 15:00:00");
