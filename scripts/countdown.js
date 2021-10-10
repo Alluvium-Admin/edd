@@ -60,7 +60,7 @@ fireworks.style.display = "block";
 
 setTimeout(() => {
     fireworks.style.display = "none";
-}, 7000);
+}, 10000);
 
 
 console.log(deadline);
