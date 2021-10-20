@@ -67,11 +67,11 @@ console.log(today);
 
 // Displaying fireworks
 
-fireworks.style.display = "block";
+// fireworks.style.display = "block";
 
-setTimeout(() => {
-    fireworks.style.display = "none";
-}, 10000);
+// setTimeout(() => {
+//     fireworks.style.display = "none";
+// }, 10000);
 
 
 console.log(deadline);
